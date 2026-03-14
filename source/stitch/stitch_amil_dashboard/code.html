@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d462",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-primary/20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">payments</span>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white font-display">ZakatDesa</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#fitur">Fitur</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#cara-kerja">Cara Kerja</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#dampak">Dampak</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#bantuan">Bantuan</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex bg-primary text-background-dark px-5 py-2 rounded-lg font-bold text-sm hover:opacity-90 transition-all">
+                        Hitung Zakat
+                    </button>
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-xl">person</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden py-16 lg:py-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-fit">
+<span class="material-symbols-outlined text-primary text-sm">verified_user</span>
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Terverifikasi Syariah</span>
+</div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white font-display">
+                            Zakat Lebih Mudah, <br/>
+<span class="text-primary">Transparan</span> &amp; <br/>
+                            Sesuai Syariah
+                        </h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl">
+                            Kelola zakat desa Anda dengan teknologi AI Syariah terdepan. Praktis, aman, dan amanah bersama ZakatDesa. Transformasi digital untuk keberkahan umat.
+                        </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-background-dark h-14 px-8 rounded-xl font-bold text-lg hover:scale-105 transition-transform flex items-center justify-center gap-2">
+<span>Hitung Zakat Sekarang</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white h-14 px-8 rounded-xl font-bold text-lg hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+                                Lihat Demo
+                            </button>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-background-dark bg-slate-500" data-alt="Profile of a user"></div>
+<div class="w-10 h-10 rounded-full border-2 border-background-dark bg-slate-600" data-alt="Profile of another user"></div>
+<div class="w-10 h-10 rounded-full border-2 border-background-dark bg-slate-700" data-alt="Profile of a third user"></div>
+<div class="w-10 h-10 rounded-full border-2 border-background-dark bg-primary flex items-center justify-center text-[10px] font-bold text-background-dark">
+                                    5K+
+                                </div>
+</div>
+<p class="text-sm text-slate-500">Muzakki telah bergabung bulan ini</p>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 to-transparent absolute -inset-4 blur-3xl opacity-50"></div>
+<div class="relative aspect-[4/3] rounded-2xl bg-slate-200 dark:bg-slate-800 border border-slate-300 dark:border-primary/20 shadow-2xl overflow-hidden" data-alt="Dashboard interface showing zakat statistics">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBP5_UvRqrcrArYOe7eqy71WuCv3zCrXX4MGJNuzpSqp3QywM28mQ0v3tT8kOD4C1g_n_6iFarJQztx0ajbY7JpXfB80Lu6M_6aJvpYqADq8-QTrd7LRR2dM4PoWyeonvG0rmQwyCCAhWRuGT4Tn2GzFZ2hBQWsV9M_FV6NYnFHhLxweTP8SXjReDnRyl01YxRbjIxP_w-rMzaw5Z5J0JitzY6j0IiYFvPmY9QiQSMblrT7fGknf8mVN5FznQpVpPpUZTnCh82Tu1Y');"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Highlights -->
+<section class="py-20 bg-slate-100 dark:bg-slate-900/30" id="fitur">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16 flex flex-col gap-4">
+<h2 class="text-primary font-bold tracking-widest uppercase text-sm">Keunggulan Kami</h2>
+<h3 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white font-display">Solusi Cerdas Pengelolaan Zakat</h3>
+<p class="text-slate-600 dark:text-slate-400">Kami menghadirkan inovasi untuk memastikan setiap rupiah zakat Anda dikelola dengan penuh amanah dan ketepatan sasaran.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="p-8 rounded-2xl border border-slate-200 dark:border-primary/10 bg-white dark:bg-background-dark hover:border-primary/40 transition-all group">
+<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-background-dark text-3xl">smart_toy</span>
+</div>
+<h4 class="text-xl font-bold mb-3">AI Syariah Assistant</h4>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed">Hitung zakat melalui percakapan alami dengan asisten cerdas kami yang telah diprogram sesuai kaidah fiqih kontemporer.</p>
+</div>
+<div class="p-8 rounded-2xl border border-slate-200 dark:border-primary/10 bg-white dark:bg-background-dark hover:border-primary/40 transition-all group">
+<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-background-dark text-3xl">database</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Database Muzakki</h4>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed">Pendataan muzakki dan mustahik yang terorganisir secara digital untuk akurasi penyaluran dan kemudahan administrasi desa.</p>
+</div>
+<div class="p-8 rounded-2xl border border-slate-200 dark:border-primary/10 bg-white dark:bg-background-dark hover:border-primary/40 transition-all group">
+<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-background-dark text-3xl">visibility</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Distribusi Transparan</h4>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed">Lacak setiap rupiah zakat Anda secara real-time dan lihat laporan dampak nyata bagi perkembangan ekonomi komunitas desa.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How it Works -->
+<section class="py-20" id="cara-kerja">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative order-2 lg:order-1">
+<div class="space-y-4">
+<div class="flex items-start gap-6 p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-primary/10">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-background-dark flex items-center justify-center font-bold text-xl">1</div>
+<div>
+<h5 class="text-lg font-bold mb-1">Tanya AI Assistant</h5>
+<p class="text-slate-500 dark:text-slate-400">Konsultasikan kewajiban zakat Anda melalui chat interaktif yang mudah dimengerti.</p>
+</div>
+</div>
+<div class="flex items-start gap-6 p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-primary/10">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-background-dark flex items-center justify-center font-bold text-xl">2</div>
+<div>
+<h5 class="text-lg font-bold mb-1">Konfirmasi Nominal</h5>
+<p class="text-slate-500 dark:text-slate-400">Verifikasi hasil perhitungan otomatis sesuai dengan kategori zakat yang Anda pilih.</p>
+</div>
+</div>
+<div class="flex items-start gap-6 p-6 rounded-2xl bg-primary/5 border border-primary/30">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-background-dark flex items-center justify-center font-bold text-xl">3</div>
+<div>
+<h5 class="text-lg font-bold mb-1">Bayar via Mayar</h5>
+<p class="text-slate-500 dark:text-slate-400">Selesaikan pembayaran aman dan instan melalui integrasi gerbang pembayaran Mayar.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">Langkah Mudah</h2>
+<h3 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white font-display mb-6">Mulai Berbagi Tanpa Ragu</h3>
+<p class="text-lg text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+                            Kami menyederhanakan proses pembayaran zakat yang rumit menjadi tiga langkah praktis. Tidak perlu lagi menghitung manual yang membingungkan.
+                        </p>
+<div class="p-6 rounded-2xl bg-primary/10 border border-primary/20 flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-4xl">security</span>
+<p class="text-sm font-medium">Data Anda dienkripsi dan diproses secara aman menggunakan standar keamanan perbankan tertinggi.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact/Social Proof -->
+<section class="py-20 bg-primary/5" id="dampak">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="flex flex-col items-center text-center p-6 bg-white dark:bg-background-dark rounded-2xl shadow-sm border border-slate-200 dark:border-primary/10">
+<span class="text-4xl font-black text-primary mb-2">100%</span>
+<p class="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide">Transparansi</p>
+<p class="text-xs mt-2 text-primary font-medium">+0% Margin Error</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-white dark:bg-background-dark rounded-2xl shadow-sm border border-slate-200 dark:border-primary/10">
+<span class="text-4xl font-black text-primary mb-2">5,000+</span>
+<p class="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide">Muzakki Aktif</p>
+<p class="text-xs mt-2 text-primary font-medium">+15% dari Bulan Lalu</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-white dark:bg-background-dark rounded-2xl shadow-sm border border-slate-200 dark:border-primary/10">
+<span class="text-4xl font-black text-primary mb-2">12,000+</span>
+<p class="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide">Mustahik Terbantu</p>
+<p class="text-xs mt-2 text-primary font-medium">+22% Jangkauan</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-white dark:bg-background-dark rounded-2xl shadow-sm border border-slate-200 dark:border-primary/10">
+<span class="text-4xl font-black text-primary mb-2">50+</span>
+<p class="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wide">Desa Binaan</p>
+<p class="text-xs mt-2 text-primary font-medium">+5 Desa Baru</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Integration Section -->
+<section class="py-20 overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-slate-900 rounded-[2.5rem] p-12 relative">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-[200px] text-primary">account_balance_wallet</span>
+</div>
+<div class="relative z-10 max-w-2xl">
+<h3 class="text-3xl font-black text-white mb-6">Pembayaran Digital Aman bersama Mayar</h3>
+<p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                        Nikmati kemudahan membayar zakat, infaq, dan sedekah melalui berbagai pilihan metode pembayaran seperti QRIS, Virtual Account, hingga E-Wallet. Terintegrasi penuh dengan <strong>Mayar</strong> untuk menjamin keamanan setiap transaksi Anda.
+                    </p>
+<div class="flex flex-wrap gap-6 items-center">
+<div class="h-8 grayscale brightness-200 opacity-60" data-alt="Mayar Logo placeholder">
+<span class="text-2xl font-black text-white italic">MAYAR</span>
+</div>
+<div class="h-[1px] w-12 bg-slate-700"></div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">credit_card</span>
+<span class="material-symbols-outlined text-primary">account_balance</span>
+<span class="material-symbols-outlined text-primary">qr_code_2</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 text-center">
+<div class="max-w-3xl mx-auto px-4">
+<h2 class="text-4xl font-black mb-8">Siap Menunaikan Kewajiban?</h2>
+<p class="text-xl text-slate-500 dark:text-slate-400 mb-10">Gunakan ZakatDesa sekarang dan rasakan kemudahan pengelolaan zakat yang modern, aman, dan penuh berkah.</p>
+<button class="bg-primary text-background-dark h-16 px-12 rounded-2xl font-bold text-xl hover:scale-105 transition-transform">
+                    Mulai Sekarang
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-900/50 border-t border-slate-200 dark:border-primary/10 pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
+<div class="col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">payments</span>
+<span class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white font-display">ZakatDesa</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 max-w-sm mb-6">
+                        Solusi manajemen zakat digital terdepan untuk ekosistem desa yang lebih mandiri dan berdaya.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">language</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+</div>
+</div>
+<div>
+<h6 class="text-slate-900 dark:text-white font-bold mb-6">Layanan</h6>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Hitung Zakat Mal</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Zakat Fitrah</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Infaq &amp; Sedekah</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Laporan Dampak</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-slate-900 dark:text-white font-bold mb-6">Perusahaan</h6>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Tentang Kami</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Karir</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Kebijakan Privasi</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Syarat &amp; Ketentuan</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-slate-900 dark:text-white font-bold mb-6">Bantuan</h6>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Pusat Bantuan</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Kontak Kami</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Panduan Muzakki</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
+<p>© 2024 ZakatDesa. Seluruh hak cipta dilindungi undang-undang.</p>
+<div class="flex gap-8">
+<span>Terdaftar di BAZNAS</span>
+<span>Keamanan oleh Mayar</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

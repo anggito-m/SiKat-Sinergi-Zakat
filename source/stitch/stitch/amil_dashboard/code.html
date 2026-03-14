@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d462",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<title>ZakatDesa - Amil Dashboard</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-64 flex-shrink-0 bg-background-light dark:bg-background-dark border-r border-slate-200 dark:border-primary/20 flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="size-8 bg-primary rounded flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined font-bold">payments</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">ZakatDesa</h1>
+</div>
+<nav class="flex-1 px-4 space-y-1 overflow-y-auto">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary text-background-dark font-semibold" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Beranda</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">groups</span>
+<span>Muzakki</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">volunteer_activism</span>
+<span>Mustahiq</span>
+</a>
+<div class="pt-4 pb-2 px-3 text-xs font-semibold text-slate-500 uppercase tracking-wider">Layanan</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">savings</span>
+<span>Zakat Fitrah</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+<span>Zakat mal</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">favorite</span>
+<span>Infaq</span>
+</a>
+<div class="pt-4 pb-2 px-3 text-xs font-semibold text-slate-500 uppercase tracking-wider">Sistem</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">bar_chart</span>
+<span>Laporan</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">settings</span>
+<span>Pengaturan</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-primary/10">
+<button class="w-full flex items-center justify-center gap-2 px-4 py-2 bg-slate-200 dark:bg-slate-800 rounded-lg text-sm font-bold hover:bg-red-500 hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm">logout</span>
+                    Keluar
+                </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-hidden">
+<!-- Header -->
+<header class="h-16 border-b border-slate-200 dark:border-primary/20 flex items-center justify-between px-8 bg-background-light dark:bg-background-dark">
+<div class="flex items-center gap-4">
+<h2 class="text-lg font-semibold">Beranda Ringkasan</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-primary/10 transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-primary rounded-full border-2 border-background-dark"></span>
+</button>
+</div>
+<div class="flex items-center gap-3 border-l border-slate-200 dark:border-primary/20 pl-6">
+<div class="text-right">
+<p class="text-sm font-bold">Pak Haji Rohman</p>
+<p class="text-xs text-slate-500 dark:text-primary/60">Amil RT 04</p>
+</div>
+<div class="size-10 rounded-full bg-primary/20 border border-primary/40 overflow-hidden">
+<img alt="User avatar" data-alt="Tampilan profil wajah pria berpeci" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0LXMgsum226mHulV0NWyVluPjZXl9T0h8Qyh170z47Hl3_-88IS3yW0B_FQJib4T1l1p71m45-XCOk_M3PNJdsJqqWVL7zlr3OURppkAIE0nunhh9Hu0-QhGBe4wMbrcK9q-5d-ZT_VacWJHBOIdAS7PnYvRvNUVyBXN_kUV_X05PDn_YSahKLXnytsDcmlGOa2kEMIkQeZRPBukw7rvbR3VYUBq1AMYcAbgZlQY0XRYV9tAKrB3UEcaFBOOeJafKJ_rdA3l29V8"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="flex-1 overflow-y-auto p-8 space-y-8">
+<!-- Stat Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-background-light dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-primary/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/20 rounded-lg">
+<span class="material-symbols-outlined text-primary">eco</span>
+</div>
+<span class="text-primary text-xs font-bold bg-primary/10 px-2 py-1 rounded">+12%</span>
+</div>
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Zakat Fitrah Terkumpul</h3>
+<p class="text-2xl font-bold mt-1">150 Kg / <span class="text-primary">Rp 5.25Jt</span></p>
+</div>
+<div class="bg-background-light dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-primary/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/20 rounded-lg">
+<span class="material-symbols-outlined text-primary">account_balance_wallet</span>
+</div>
+<span class="text-primary text-xs font-bold bg-primary/10 px-2 py-1 rounded">+5%</span>
+</div>
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Zakat mal</h3>
+<p class="text-2xl font-bold mt-1">Rp 12.000.000</p>
+</div>
+<div class="bg-background-light dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-primary/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/20 rounded-lg">
+<span class="material-symbols-outlined text-primary">volunteer_activism</span>
+</div>
+<span class="text-red-400 text-xs font-bold bg-red-400/10 px-2 py-1 rounded">-2%</span>
+</div>
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Infaq/Sedekah</h3>
+<p class="text-2xl font-bold mt-1">Rp 3.500.000</p>
+</div>
+<div class="bg-background-light dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-primary/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/20 rounded-lg">
+<span class="material-symbols-outlined text-primary">family_restroom</span>
+</div>
+<span class="text-slate-500 text-xs font-bold bg-slate-500/10 px-2 py-1 rounded">Stabil</span>
+</div>
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Mustahiq (8 Asnaf)</h3>
+<p class="text-2xl font-bold mt-1">42 <span class="text-sm font-normal text-slate-500">Keluarga</span></p>
+</div>
+</div>
+<!-- Middle Section: Chart and Assistant -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Chart -->
+<div class="lg:col-span-2 bg-background-light dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-primary/10 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-bold">Tren Penerimaan Harian</h3>
+<select class="bg-transparent border border-slate-200 dark:border-primary/20 rounded-lg text-sm px-3 py-1 focus:ring-primary focus:border-primary">
+<option>7 Hari Terakhir</option>
+<option>30 Hari Terakhir</option>
+</select>
+</div>
+<div class="h-64 flex flex-col justify-between">
+<div class="flex-1 flex items-end gap-2 px-2">
+<div class="w-full bg-primary/10 h-1/2 rounded-t-lg relative group transition-all hover:bg-primary/30">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">Rp 2.1jt</div>
+</div>
+<div class="w-full bg-primary/20 h-3/4 rounded-t-lg relative group transition-all hover:bg-primary/40"></div>
+<div class="w-full bg-primary/10 h-2/3 rounded-t-lg relative group transition-all hover:bg-primary/30"></div>
+<div class="w-full bg-primary/40 h-1/2 rounded-t-lg relative group transition-all hover:bg-primary/60"></div>
+<div class="w-full bg-primary/20 h-5/6 rounded-t-lg relative group transition-all hover:bg-primary/40"></div>
+<div class="w-full bg-primary/60 h-full rounded-t-lg relative group transition-all hover:bg-primary/80"></div>
+<div class="w-full bg-primary/30 h-4/5 rounded-t-lg relative group transition-all hover:bg-primary/50"></div>
+</div>
+<div class="flex justify-between text-xs text-slate-500 font-medium mt-4 pt-4 border-t border-slate-100 dark:border-primary/5">
+<span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span><span>Min</span>
+</div>
+</div>
+</div>
+<!-- AI Assistant Sidebar Card -->
+<div class="bg-primary/5 border-2 border-primary/20 p-6 rounded-xl shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-8xl text-primary">psychology</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-4">
+<div class="p-1.5 bg-primary text-background-dark rounded-full">
+<span class="material-symbols-outlined text-sm font-bold">smart_toy</span>
+</div>
+<h3 class="font-bold text-lg">AI Asisten Syariah</h3>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                                Tanyakan perhitungan nisab, hukum fikih zakat, atau saran alokasi penyaluran berdasarkan asnaf.
+                            </p>
+<div class="space-y-2">
+<button class="w-full text-left p-3 rounded-lg bg-white dark:bg-background-dark/50 border border-primary/20 text-xs hover:border-primary transition-colors flex items-center justify-between group">
+<span>"Berapa nisab emas tahun 2024?"</span>
+<span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</button>
+<button class="w-full text-left p-3 rounded-lg bg-white dark:bg-background-dark/50 border border-primary/20 text-xs hover:border-primary transition-colors flex items-center justify-between group">
+<span>"Siapa yang berhak menerima Infaq?"</span>
+<span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</button>
+<button class="w-full mt-4 py-3 bg-primary text-background-dark rounded-lg font-bold text-sm hover:brightness-95 transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-base">chat_bubble</span>
+                                    Mulai Diskusi Baru
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Table: Recent Transactions -->
+<div class="bg-background-light dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-primary/10 shadow-sm overflow-hidden">
+<div class="px-6 py-4 border-b border-slate-200 dark:border-primary/10 flex items-center justify-between">
+<h3 class="text-lg font-bold">Transaksi Terbaru</h3>
+<button class="text-primary text-sm font-bold hover:underline">Lihat Semua</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-background-dark/30 text-slate-500 dark:text-slate-400 text-xs uppercase tracking-wider">
+<th class="px-6 py-4 font-semibold">Muzakki</th>
+<th class="px-6 py-4 font-semibold">Jenis Layanan</th>
+<th class="px-6 py-4 font-semibold">Jumlah</th>
+<th class="px-6 py-4 font-semibold">Metode</th>
+<th class="px-6 py-4 font-semibold">Waktu</th>
+<th class="px-6 py-4 font-semibold">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-primary/5">
+<tr class="hover:bg-slate-50/50 dark:hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-xs font-bold">B</div>
+<p class="font-medium text-sm">Budi Santoso</p>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Zakat Fitrah</td>
+<td class="px-6 py-4 text-sm font-bold">Rp 45.000</td>
+<td class="px-6 py-4 text-sm">Transfer QRIS</td>
+<td class="px-6 py-4 text-sm text-slate-500">10:45 AM</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">Selesai</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-xs font-bold">S</div>
+<p class="font-medium text-sm">Siti Aminah</p>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Zakat mal</td>
+<td class="px-6 py-4 text-sm font-bold">Rp 2.500.000</td>
+<td class="px-6 py-4 text-sm">Tunai</td>
+<td class="px-6 py-4 text-sm text-slate-500">09:12 AM</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">Selesai</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-xs font-bold">A</div>
+<p class="font-medium text-sm">Agus Pratama</p>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Infaq</td>
+<td class="px-6 py-4 text-sm font-bold">Rp 50.000</td>
+<td class="px-6 py-4 text-sm">Transfer Bank</td>
+<td class="px-6 py-4 text-sm text-slate-500">Kemarin</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-yellow-400/10 text-yellow-500 text-[10px] font-bold rounded uppercase">Pending</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Floating AI Button (Mobile/Alternative Access) -->
+<button class="fixed bottom-6 right-6 lg:hidden size-14 bg-primary text-background-dark rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-3xl">smart_toy</span>
+</button>
+</body></html>
