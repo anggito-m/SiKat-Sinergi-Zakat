@@ -357,6 +357,9 @@ export default function LandingPage() {
                 <a href="https://linkedin.com/in/anggito-muhammad-amien" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-1">
                   <i className="fa-brands fa-linkedin text-sm"></i> LinkedIn
                 </a>
+                <a href="https://anggito.farmpix.cloud" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-1">
+                  <i className="fa-brands fa-globe text-sm"></i> Website
+                </a>
               </div>
             </div>
             <div className="flex gap-10">
