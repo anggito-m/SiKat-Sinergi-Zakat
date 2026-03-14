@@ -78,4 +78,4 @@ Platform ini dibangun dengan stack teknologi modern untuk menjamin performa dan 
 ---
 
 ## 📄 Lisensi
-Hak Cipta © 2024 **SiKat** - Dikembangkan oleh **Anggito Muhammad Amien**. Seluruh hak cipta dilindungi undang-undang.
+Hak Cipta © 2026 **SiKat** - Dikembangkan oleh **Anggito Muhammad Amien**. Seluruh hak cipta dilindungi undang-undang.
