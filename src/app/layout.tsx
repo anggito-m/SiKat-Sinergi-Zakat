@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "SiKat - Sinergi Zakat Desa",
   description: "Sinergi Zakat, Bersihkan Hati, Tumbuhkan Desa.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon-dark.ico", // Default to dark as per initial state
   },
 };
 
@@ -34,6 +34,12 @@ export default function RootLayout({
               try {
                 const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
                 document.documentElement.classList.add(theme);
+                
+                // Set initial favicon
+                const link = document.createElement('link');
+                link.rel = 'icon';
+                link.href = '/favicon-' + theme + '.ico';
+                document.head.appendChild(link);
               } catch (e) {}
             `,
           }}

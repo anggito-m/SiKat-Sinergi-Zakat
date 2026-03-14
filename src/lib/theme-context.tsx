@@ -24,6 +24,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setThemeState(initialTheme);
     document.documentElement.classList.remove('light', 'dark');
     document.documentElement.classList.add(initialTheme);
+    
+    // Update favicon
+    const favicon = document.querySelector('link[rel="icon"]');
+    if (favicon) {
+      favicon.setAttribute('href', `/favicon-${initialTheme}.ico`);
+    }
   }, []);
 
   const setTheme = (newTheme: Theme) => {
@@ -31,6 +37,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('theme', newTheme);
     document.documentElement.classList.remove('light', 'dark');
     document.documentElement.classList.add(newTheme);
+
+    // Update favicon
+    const favicon = document.querySelector('link[rel="icon"]');
+    if (favicon) {
+      favicon.setAttribute('href', `/favicon-${newTheme}.ico`);
+    }
   };
 
   const toggleTheme = () => {
