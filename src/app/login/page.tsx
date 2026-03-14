@@ -132,7 +132,7 @@ export default function LoginPage() {
         </p>
         <div className="text-center mt-6 py-4 border-t border-slate-200 dark:border-primary/10">
           <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-2">
-            SiKat &copy; 2024 &middot; Dusun Babakan
+            SiKat &copy; 2026 &middot; Dusun Babakan
           </p>
           <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 flex items-center justify-center gap-1">
             Developed by <span className="text-primary">Anggito Muhammad Amien</span>

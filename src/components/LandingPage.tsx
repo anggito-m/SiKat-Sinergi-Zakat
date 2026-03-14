@@ -345,7 +345,7 @@ export default function LandingPage() {
           </div>
           <div className="pt-10 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
-              <p>© 2024 SiKat. All Rights Reserved.</p>
+              <p>© 2026 SiKat. All Rights Reserved.</p>
               <div className="hidden md:block w-px h-3 bg-slate-300 dark:bg-slate-700"></div>
               <p className="flex items-center gap-2">
                 Developed by <span className="text-primary">Anggito Muhammad Amien</span>

@@ -63,7 +63,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
         {/* Internal Footer - Credit to Anggito Muhammad Amien */}
         <footer className="shrink-0 py-3 px-6 bg-white/50 dark:bg-background-dark/50 backdrop-blur-sm border-t border-slate-200 dark:border-primary/10 flex flex-col md:flex-row justify-between items-center gap-2">
           <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">
-            <span>© 2024 SIKAT</span>
+            <span>© 2026 SIKAT</span>
             <div className="hidden md:block w-px h-2 bg-slate-300 dark:bg-slate-700"></div>
             <span>DEVELOPED BY <span className="text-primary">ANGGITO MUHAMMAD AMIEN</span></span>
           </div>
