@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "SiKat - Sinergi Zakat Desa",
   description: "Sinergi Zakat, Bersihkan Hati, Tumbuhkan Desa.",
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
   },
 };
 
