@@ -31,7 +31,7 @@ const adminItems = [
   { href: '/admin/penugasan', label: 'Penugasan Amil', icon: 'assignment_ind' },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ onClose }: { onClose?: () => void }) {
   const pathname = usePathname();
   const { profile, signOut } = useAuth();
   const router = useRouter();
@@ -77,12 +77,22 @@ export default function Sidebar() {
   const sistemItems = filterByRole(allSistemItems);
 
   return (
-    <aside className="w-64 shrink-0 bg-background-light dark:bg-background-dark border-r border-slate-200 dark:border-primary/20 flex flex-col">
-      <div className="p-6 flex items-center gap-3">
-        <div className="size-8 bg-primary rounded flex items-center justify-center text-background-dark">
-          <span className="material-symbols-outlined font-bold">payments</span>
+    <aside className="w-64 h-full shrink-0 bg-background-light dark:bg-background-dark border-r border-slate-200 dark:border-primary/20 flex flex-col">
+      <div className="p-6 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="size-8 bg-primary rounded flex items-center justify-center text-background-dark">
+            <span className="material-symbols-outlined font-bold">payments</span>
+          </div>
+          <h1 className="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">SiKat</h1>
         </div>
-        <h1 className="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">SiKat</h1>
+        {onClose && (
+          <button 
+            onClick={onClose}
+            className="lg:hidden p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg text-slate-500"
+          >
+            <span className="material-symbols-outlined">close</span>
+          </button>
+        )}
       </div>
       <nav className="flex-1 px-4 space-y-1 overflow-y-auto">
         {navItems.map(renderLink)}

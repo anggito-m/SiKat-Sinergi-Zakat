@@ -2,7 +2,7 @@
 
 import { useAuth } from '@/lib/auth-context';
 import { useRouter, usePathname } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Sidebar from './Sidebar';
 
 export default function AppShell({ children }: { children: React.ReactNode }) {
@@ -12,6 +12,12 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
 
   const isAuthPage = pathname === '/login' || pathname === '/register';
   const isLandingPage = pathname === '/';
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  // Close sidebar on route change (for mobile)
+  useEffect(() => {
+    setIsSidebarOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     // Redirect to login if trying to access private page while not logged in
@@ -55,10 +61,38 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
 
   // Authenticated (including Dashboard on /) — render full app layout
   return (
-    <div className="flex h-screen overflow-hidden">
-      <Sidebar />
+    <div className="flex h-screen overflow-hidden bg-background-light dark:bg-background-dark">
+      {/* Sidebar Overlay for mobile */}
+      {isSidebarOpen && (
+        <div 
+          className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-40 lg:hidden transition-opacity"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
+      {/* Sidebar - responsive */}
+      <div className={`fixed inset-y-0 left-0 z-50 transform lg:relative lg:translate-x-0 transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+        <Sidebar onClose={() => setIsSidebarOpen(false)} />
+      </div>
+
       <main className="flex-1 flex flex-col overflow-hidden relative">
-        {children}
+        {/* Mobile Header Toggle */}
+        <header className="lg:hidden h-16 shrink-0 border-b border-slate-200 dark:border-primary/20 flex items-center px-4 bg-background-light dark:bg-background-dark">
+          <button 
+            onClick={() => setIsSidebarOpen(true)}
+            className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg text-slate-600 dark:text-slate-400"
+          >
+            <span className="material-symbols-outlined">menu</span>
+          </button>
+          <div className="ml-4 flex items-center gap-2">
+            <span className="material-symbols-outlined text-primary">payments</span>
+            <span className="text-xl font-bold tracking-tight">SiKat</span>
+          </div>
+        </header>
+
+        <div className="flex-1 overflow-y-auto">
+          {children}
+        </div>
 
         {/* Internal Footer - Credit to Anggito Muhammad Amien */}
         <footer className="shrink-0 py-3 px-6 bg-white/50 dark:bg-background-dark/50 backdrop-blur-sm border-t border-slate-200 dark:border-primary/10 flex flex-col md:flex-row justify-between items-center gap-2">

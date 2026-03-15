@@ -56,7 +56,7 @@ export default function ZakatFitrahPage() {
       setMuzakkiList(data);
       // Auto-select for user role
       if (isUser && data.length === 1) {
-        handleSelect(data[0].id);
+        handleSelect(data[0].id, data[0]);
       }
     }
   }, [isUser, muzakkiId, authLoading, profile]);
@@ -79,9 +79,9 @@ export default function ZakatFitrahPage() {
 
   const selectedMuzakki = muzakkiList.find(m => m.id === selectedId);
 
-  const handleSelect = (id: string) => {
+  const handleSelect = (id: string, muzakkiObj?: Muzakki) => {
     setSelectedId(id);
-    const m = muzakkiList.find(x => x.id === id);
+    const m = muzakkiObj || muzakkiList.find(x => x.id === id);
     if (m) setJumlahAnggota(m.jumlah_anggota);
     setSuccess(false);
     setError('');
