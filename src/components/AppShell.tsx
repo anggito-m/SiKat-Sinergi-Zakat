@@ -90,7 +90,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
           </div>
         </header>
 
-        <div className="flex-1 overflow-y-auto">
+        <div className={`flex-1 ${pathname.startsWith('/ai-chat') ? 'overflow-hidden flex flex-col' : 'overflow-y-auto'}`}>
           {children}
         </div>
 
@@ -111,10 +111,12 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
           </div>
         </footer>
 
-        {/* Floating AI Button (Mobile) */}
-        <a href="/ai-chat" className="fixed bottom-6 right-6 lg:hidden size-14 bg-primary text-background-dark rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95 z-50">
-          <span className="material-symbols-outlined text-3xl">smart_toy</span>
-        </a>
+        {/* Floating AI Button (Mobile) - Hidden when already on AI Chat page */}
+        {!pathname.startsWith('/ai-chat') && (
+          <a href="/ai-chat" className="fixed bottom-6 right-6 lg:hidden size-14 bg-primary text-background-dark rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95 z-50">
+            <span className="material-symbols-outlined text-3xl">smart_toy</span>
+          </a>
+        )}
       </main>
     </div>
   );

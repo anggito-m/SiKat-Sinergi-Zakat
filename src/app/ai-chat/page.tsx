@@ -322,7 +322,7 @@ export default function AIChatPage() {
   ];
 
   return (
-    <>
+    <div className="flex flex-col h-full overflow-hidden">
       <Header title="AI Asisten Syariah" />
       <div className="flex-1 flex overflow-hidden">
         {/* Session Sidebar */}
@@ -614,6 +614,6 @@ export default function AIChatPage() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
