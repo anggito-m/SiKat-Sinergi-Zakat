@@ -46,15 +46,15 @@ export default function LoginPage() {
       {/* Background decoration */}
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 blur-[120px] rounded-full z-0 pointer-events-none"></div>
 
-      {/* Back Button */}
-      <a href="/" className="absolute top-8 left-8 flex items-center gap-2 text-slate-500 hover:text-primary transition-colors group z-10">
-        <div className="size-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-primary/10 flex items-center justify-center group-hover:border-primary/50 group-hover:shadow-lg group-hover:shadow-primary/10 transition-all">
-          <span className="material-symbols-outlined text-xl">arrow_back</span>
-        </div>
-        <span className="text-sm font-bold">Kembali ke Landing Page</span>
-      </a>
+      <div className="w-full max-w-md relative z-10 flex flex-col pt-20 sm:pt-0">
+        {/* Back Button */}
+        <a href="/" className="absolute top-8 left-0 sm:left-8 flex items-center gap-2 text-slate-500 hover:text-primary transition-colors group z-10">
+          <div className="size-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-primary/10 flex items-center justify-center group-hover:border-primary/50 group-hover:shadow-lg group-hover:shadow-primary/10 transition-all">
+            <span className="material-symbols-outlined text-xl">arrow_back</span>
+          </div>
+          <span className="text-sm font-bold truncate">Kembali</span>
+        </a>
 
-      <div className="w-full max-w-md relative z-10">
         {/* Logo & Title */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center size-16 bg-primary rounded-2xl mb-4 shadow-lg shadow-primary/30">
