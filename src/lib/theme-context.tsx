@@ -28,7 +28,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     // Update favicon
     const favicon = document.querySelector('link[rel="icon"]');
     if (favicon) {
-      favicon.setAttribute('href', `/favicon-${initialTheme}.ico`);
+      favicon.setAttribute('href', `/favicon-${initialTheme}.png`);
     }
   }, []);
 
@@ -41,7 +41,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     // Update favicon
     const favicon = document.querySelector('link[rel="icon"]');
     if (favicon) {
-      favicon.setAttribute('href', `/favicon-${newTheme}.ico`);
+      favicon.setAttribute('href', `/favicon-${newTheme}.png`);
     }
   };
 
